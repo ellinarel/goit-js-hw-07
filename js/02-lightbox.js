@@ -1,7 +1,7 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-console.log(galleryItems);
+
 const galleryEl = document.querySelector(".gallery")
 const imgCardMarkup = createimgCardMarkup(galleryItems)
 function createimgCardMarkup(galleryItems) 
@@ -13,10 +13,7 @@ function createimgCardMarkup(galleryItems)
 }
 galleryEl.insertAdjacentHTML('afterbegin', imgCardMarkup);
 
-galleryEl.addEventListener('click', imgOnclick);
-function imgOnclick(ev){
-ev.preventDefault();
+
 const lightbox = new SimpleLightbox('.gallery a', {  captionDelay: 250,
     captionsData: "alt",})
 
-}
